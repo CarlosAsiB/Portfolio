@@ -1,0 +1,25 @@
+---
+import ItemExperiencia from "../components/ItemExperiencia.astro"
+const EXPERIENCIE = [
+  {
+    date: "Por confirmar",
+    title: "Testing de Software",
+    company: "GrupoTech",
+    description:
+      "Descripción de la experiencia laboral en GrupoTech",
+    link: "https://webgt.grupo-tech.com",
+  },
+  
+
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ItemExperiencia {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

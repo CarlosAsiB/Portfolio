@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
+import GitHubIcon from '../components/icons/GitHubIcon.astro';
+import MailIcon from '../components/icons/MailIcon.astro';
+import Experiencia from '../components/Experiencia.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Maleta from '../components/icons/Maleta.astro'
+import Code from '../components/icons/Code.astro'
+import Proyectos from '../components/Proyectos.astro'
+import AboutMe from '../components/AboutMe.astro'
+import ProfileCheck from '../components/icons/ProfileCheck.astro';
+---
+
+<Layout title="Portfolio de Carlos Asi - Desarollador y Programador Web." description="Desarollador y programador web">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-24">
+			<img 
+			class="rounded-full size-12 mb-4" 
+			src="https://media.licdn.com/dms/image/D4E03AQFDTSRqFw4OxA/profile-displayphoto-shrink_800_800/0/1710551052362?e=1716422400&v=beta&t=ylVAIOniWZLOJpDWxjutdIv3butOhk59EZU2QtIJ04o" 
+			alt="carlos foto"
+			>	
+		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+			Hola, soy Carlos <a href="https://linkedin.com/in/carlos-asi-baruj-134b3a2ba/" class="flex justify-center items-center">
+				<Badge>Disponible para trabajar</Badge>
+			</a>
+		</h1>
+		<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+			Desarollador Web de Montevideo, Uruguay. Me gustan los retos, aprender y trabajar en equipo. 
+		</h2>
+
+		<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://linkedin.com/in/carlos-asi-baruj-134b3a2ba/">
+					<LinkedInIcon class="size-4 md:size-6"/>
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/CarlosAsiB">
+					<GitHubIcon class="size-4 md:size-6"/>
+					GitHub
+				</SocialPill>
+				<SocialPill href="mailto:carlosasitrabajo@gmail.com">
+					<MailIcon class="size-4 md:size-6"/>
+					carlosasitrabajo@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="experiencia">
+			
+			<h2 
+			
+			class="texto-3xl font-semibold mb-6 gap-x-3 items-center">
+			<Maleta class="size-7"/>
+				Experiencia Laboral
+			</h2>
+		<Experiencia />
+	</SectionContainer>
+
+	<SectionContainer id="proyectos">
+			
+		<h2 
+		
+		class="texto-3xl font-semibold mb-6 gap-x-3 items-center">
+		<Code class="size-7"/>
+			Proyectos
+		</h2>
+		<Proyectos />
+	
+</SectionContainer>
+
+<SectionContainer id="sobre-mi">
+	<h2
+	  class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+	>
+	  <ProfileCheck class="size-8" />
+	  Sobre mí
+	</h2>
+	<AboutMe />
+  </SectionContainer>
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
